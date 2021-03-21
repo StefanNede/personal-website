@@ -1,20 +1,4 @@
-$main-bg-color: #435f8c;
-$main-text-color: #e3e4e6;
-$darker-text-color: #c1c1c1;
-$nav-bg-color: #5d77a0;
-
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: $main-bg-color;
-  font-size: 62.5%;
-}
-
+@import "./variables";
 .main_nav.clear {
   left: -30vw;
 }
