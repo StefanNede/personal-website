@@ -91,4 +91,16 @@ body {
   background-color: #435f8c;
   font-size: 62.5%;
 }
+
+.rest_of_page {
+  position: absolute;
+  width: 70vw;
+  left: 30vw;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.rest_of_page.nav_open {
+  margin-left: 30vw;
+}
 /*# sourceMappingURL=index.css.map */

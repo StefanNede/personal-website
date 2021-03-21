@@ -11,3 +11,13 @@ body {
   background-color: $main-bg-color;
   font-size: 62.5%;
 }
+
+.rest_of_page {
+  position: absolute;
+  width: 70vw;
+  left: 30vw;
+  transition: all 0.5s ease;
+  &.nav_open {
+    margin-left: 30vw;
+  }
+}
