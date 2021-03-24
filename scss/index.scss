@@ -14,8 +14,8 @@ html {
 body {
   background-color: $main-bg-color;
   background-image: url(../svgs/main-background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: 125%;
   font-size: 62.5%;
 }
 
