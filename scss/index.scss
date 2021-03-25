@@ -1,5 +1,6 @@
 @import "./variables";
 @import "./nav";
+@import "./customCursor";
 
 html {
   scroll-behavior: smooth;
@@ -20,6 +21,7 @@ body {
 }
 
 .rest_of_page {
+  color: $main-text-color;
   position: absolute;
   width: 70vw;
   left: 30vw;
@@ -44,7 +46,7 @@ body {
       #s {
         transition: font-size 0.4s ease;
         &:hover {
-          color: white;
+          color: rgb(230, 193, 123);
           font-size: 1.5em;
         }
       }
@@ -64,5 +66,25 @@ body {
   }
   .appear-further-down {
     padding-bottom: 20vh;
+    .skills {
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        .logo {
+          margin-right: 10px;
+          height: calc(5rem + 5vw);
+          width: calc(5rem + 5vw);
+          border-radius: 50%;
+          &:hover {
+            box-shadow: 0 0 10px 10px $nav-bg-color;
+          }
+        }
+        .js_logo {
+          padding: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 }

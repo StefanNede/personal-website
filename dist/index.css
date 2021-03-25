@@ -74,9 +74,27 @@
 }
 
 .main_nav ul li a {
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
   font-size: calc(1rem + 1vw);
   text-decoration: none;
   color: #e3e4e6;
+}
+
+.main_nav ul li a:hover {
+  color: #c1c1c1;
+}
+
+.circle {
+  position: absolute;
+  height: calc(2rem + 5vw);
+  width: calc(2rem + 5vw);
+  border-radius: 50%;
+  background: transparent;
+  -webkit-box-shadow: 0 0 0 2px #bababa;
+          box-shadow: 0 0 0 2px #bababa;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 html {
@@ -100,6 +118,7 @@ body {
 }
 
 .rest_of_page {
+  color: #e3e4e6;
   position: absolute;
   width: 70vw;
   left: 30vw;
@@ -142,7 +161,7 @@ body {
 }
 
 .content .appear-first .name #s:hover {
-  color: white;
+  color: #e6c17b;
   font-size: 1.5em;
 }
 
@@ -164,5 +183,31 @@ body {
 
 .content .appear-further-down {
   padding-bottom: 20vh;
+}
+
+.content .appear-further-down .skills ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content .appear-further-down .skills ul .logo {
+  margin-right: 10px;
+  height: calc(5rem + 5vw);
+  width: calc(5rem + 5vw);
+  border-radius: 50%;
+}
+
+.content .appear-further-down .skills ul .logo:hover {
+  -webkit-box-shadow: 0 0 10px 10px #5d77a0;
+          box-shadow: 0 0 10px 10px #5d77a0;
+}
+
+.content .appear-further-down .skills ul .js_logo {
+  padding: 10px;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=index.css.map */

@@ -74,9 +74,15 @@
 }
 
 .main_nav ul li a {
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
   font-size: calc(1rem + 1vw);
   text-decoration: none;
   color: #e3e4e6;
+}
+
+.main_nav ul li a:hover {
+  color: #c1c1c1;
 }
 
 * {
