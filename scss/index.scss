@@ -1,6 +1,8 @@
 @import "./variables";
 @import "./nav";
 @import "./customCursor";
+@import "./footer";
+@import "./backToTop";
 
 html {
   scroll-behavior: smooth;
@@ -28,7 +30,7 @@ body {
   height: 100vh;
   transition: all 0.5s ease;
   &.nav_open {
-    margin-left: 30vw;
+    padding-left: 30vw;
   }
 }
 
