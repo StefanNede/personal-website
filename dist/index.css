@@ -101,6 +101,7 @@
 .back-to-top {
   position: fixed;
   top: 95vh;
+  left: 5vw;
 }
 
 html {
@@ -188,7 +189,10 @@ body {
 }
 
 .content .appear-further-down {
+  position: relative;
   padding-bottom: 20vh;
+  left: -5vw;
+  width: 75vw;
 }
 
 .content .appear-further-down .skills ul {
@@ -205,6 +209,8 @@ body {
   height: calc(5rem + 5vw);
   width: calc(5rem + 5vw);
   border-radius: 50%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .content .appear-further-down .skills ul .logo:hover {
@@ -212,8 +218,18 @@ body {
           box-shadow: 0 0 10px 10px #5d77a0;
 }
 
-.content .appear-further-down .skills ul .js_logo {
+.content .appear-further-down .skills ul .html_logo,
+.content .appear-further-down .skills ul .css_logo {
   padding: 10px;
-  border-radius: 50%;
+}
+
+.content .appear-further-down .skills ul .html_logo:hover,
+.content .appear-further-down .skills ul .css_logo:hover {
+  -webkit-box-shadow: 0 0 10px 10px #5d77a0;
+          box-shadow: 0 0 10px 10px #5d77a0;
+}
+
+.content .appear-further-down .skills ul .react_logo {
+  padding: 9px;
 }
 /*# sourceMappingURL=index.css.map */

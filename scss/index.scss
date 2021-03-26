@@ -67,7 +67,10 @@ body {
     }
   }
   .appear-further-down {
+    position: relative;
     padding-bottom: 20vh;
+    left: -5vw;
+    width: 75vw;
     .skills {
       ul {
         list-style: none;
@@ -78,13 +81,20 @@ body {
           height: calc(5rem + 5vw);
           width: calc(5rem + 5vw);
           border-radius: 50%;
+          transition: all 0.25s ease-in-out;
           &:hover {
             box-shadow: 0 0 10px 10px $nav-bg-color;
           }
         }
-        .js_logo {
+        .html_logo,
+        .css_logo {
           padding: 10px;
-          border-radius: 50%;
+          &:hover {
+            box-shadow: 0 0 10px 10px $nav-bg-color;
+          }
+        }
+        .react_logo {
+          padding: 9px;
         }
       }
     }
