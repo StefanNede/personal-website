@@ -1,5 +1,7 @@
 @import "./nav";
 @import "./variables";
+@import "./button";
+@import "./customCursor";
 
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -11,4 +13,47 @@
 body {
   background-color: $contact-bg-color;
   font-size: 62.5%;
+}
+
+.form h2 {
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  margin-top: 6vh;
+  color: $main-text-color;
+  font-weight: lighter;
+  font-size: calc(1.5rem + 5vw);
+  margin-top: calc(3rem + 5vw);
+}
+
+form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin-top: calc(30vh + (1.5rem + 3vw));
+  width: 100vw;
+  font-size: calc(1.1rem + 2vw);
+  color: $main-text-color;
+  input {
+    margin-left: 5vw;
+    height: calc(1.1rem + 2vw);
+    font-size: calc(1.1rem + 1vw);
+    background-color: $main-text-color;
+    color: #606060;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+  div {
+    margin-bottom: 10vh;
+  }
+  .messagePF {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+  button {
+    margin-bottom: 5vh;
+  }
 }

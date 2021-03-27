@@ -14,7 +14,6 @@ backToTopButton === null || backToTopButton === void 0 ? void 0 : backToTopButto
 // this gets the coordinates of the about me content for the smooth scrolling button
 // you can use top, bottom, left, and right
 const positions = aboutMeContent === null || aboutMeContent === void 0 ? void 0 : aboutMeContent.getBoundingClientRect();
-const hello = "hello";
 document.addEventListener("mousemove", function (event) {
     const customCursorPositions = customCursor === null || customCursor === void 0 ? void 0 : customCursor.getBoundingClientRect();
     let cursorHeight = (customCursorPositions.height);

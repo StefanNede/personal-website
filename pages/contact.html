@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="../dist/contact.css">
 </head>
 <body>
-    <!-- Contact me please -->
-    <!-- hamburger -->
+    <span class="circle"></span>
     <div class="hamburger">
         <div class="hl hl1"></div>
         <div class="x">
@@ -24,6 +23,26 @@
             <li><a href="./contact.html" class="to_contact">Contact</a></li>
         </ul>
     </nav>
+    <div class="form">
+        <h2>Contact me</h2>
+        <form   action="https://formspree.io/f/mgerwrrr"
+        method="POST">
+            <div>
+                <label for="email">email:</label>
+                <input type="email" id="email" placeholder="enter your email" name="_replyto"/>
+            </div>
+            <div>
+                <label for="subject">subject:</label>
+                <input id="subject" type="text" name="_subject" placeholder="subject of message" />
+            </div>
+            <div class="messagePF">
+                <label for="message">message:</label>
+            </br>
+                <textarea name = "message" type= "text" id="message" placeholder="enter your message here"></textarea>
+            </div>
+            <button type="submit" >Send</button>
+        </form>
+    </div>
     <script src="../dist/contact.js"></script>
 </body>
 </html>

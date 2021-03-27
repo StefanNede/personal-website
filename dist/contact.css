@@ -86,6 +86,29 @@
   color: #c1c1c1;
 }
 
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+button:hover {
+  -webkit-box-shadow: 0 0 10px 0 #c1c1c1;
+          box-shadow: 0 0 10px 0 #c1c1c1;
+}
+
+.circle {
+  position: absolute;
+  height: calc(2rem + 5vw);
+  width: calc(2rem + 5vw);
+  border-radius: 50%;
+  background: transparent;
+  -webkit-box-shadow: 0 0 0 2px #bababa;
+          box-shadow: 0 0 0 2px #bababa;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -97,5 +120,61 @@
 body {
   background-color: #66ab77;
   font-size: 62.5%;
+}
+
+.form h2 {
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  margin-top: 6vh;
+  color: #e3e4e6;
+  font-weight: lighter;
+  font-size: calc(1.5rem + 5vw);
+  margin-top: calc(3rem + 5vw);
+}
+
+form {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: calc(30vh + (1.5rem + 3vw));
+  width: 100vw;
+  font-size: calc(1.1rem + 2vw);
+  color: #e3e4e6;
+}
+
+form input {
+  margin-left: 5vw;
+  height: calc(1.1rem + 2vw);
+  font-size: calc(1.1rem + 1vw);
+  background-color: #e3e4e6;
+  color: #606060;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 10vh;
+}
+
+form .messagePF {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+form button {
+  margin-bottom: 5vh;
 }
 /*# sourceMappingURL=contact.css.map */

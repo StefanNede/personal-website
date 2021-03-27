@@ -86,6 +86,17 @@
   color: #c1c1c1;
 }
 
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+button:hover {
+  -webkit-box-shadow: 0 0 10px 0 #c1c1c1;
+          box-shadow: 0 0 10px 0 #c1c1c1;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
