@@ -2,6 +2,8 @@ const hamburger:HTMLElement = document.querySelector(".hamburger");
 const hamburger_lines:Array = document.querySelectorAll(".hl");
 const nav:HTMLNavbar = document.querySelector(".main_nav");
 
+nav.style.backgroundColor = "#c19393";
+
 hamburger.addEventListener("click", ()=>{
     hamburger_lines[1].classList.toggle("clicked");
     hamburger_lines[3].classList.toggle("clicked");
