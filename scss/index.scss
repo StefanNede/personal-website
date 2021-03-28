@@ -5,6 +5,28 @@
 @import "./backToTop";
 @import "./button";
 
+$names: "html", "css", "js", "scss", "react";
+
+@mixin getDropdownName($name) {
+  display: block;
+  position: absolute;
+  content: $name;
+  color: rgb(41, 41, 41);
+  margin-left: calc(((4rem + 5vw) / 2));
+  background-color: rgb(223, 223, 223);
+  padding: 0.2rem 0.3rem;
+  border-radius: 1rem;
+  margin-top: -2rem;
+}
+
+@each $name in $names {
+  .#{$name}:hover {
+    &::after {
+      @include getDropdownName($name);
+    }
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

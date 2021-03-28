@@ -43,7 +43,7 @@ form {
     background-color: $main-text-color;
     color: #606060;
     border: none;
-    border-radius: 10px;
+    border-radius: 1rem;
     text-align: center;
   }
   div {
@@ -55,5 +55,11 @@ form {
   }
   button {
     margin-bottom: 5vh;
+  }
+}
+
+@media screen and (min-width: 830px) {
+  .form h2 {
+    margin-top: calc(3rem + 2vw);
   }
 }
