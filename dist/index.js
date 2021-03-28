@@ -33,5 +33,5 @@ hamburger.addEventListener("click", () => {
 });
 // scroll to the top of the about me content
 scrollDown === null || scrollDown === void 0 ? void 0 : scrollDown.addEventListener("click", () => {
-    window.scrollTo(0, positions.top);
+    window.scrollTo(0, positions.bottom);
 });

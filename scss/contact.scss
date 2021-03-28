@@ -11,6 +11,9 @@
 }
 
 body {
+  background-image: url(../svgs/contact-background.svg);
+  background-repeat: repeat-y;
+  background-size: 125%;
   background-color: $contact-bg-color;
   font-size: 62.5%;
 }

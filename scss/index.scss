@@ -11,10 +11,11 @@ $names: "html", "css", "js", "scss", "react";
   display: block;
   position: absolute;
   content: $name;
-  color: rgb(41, 41, 41);
+  color: rgb(255, 255, 255);
   margin-left: calc(((4rem + 5vw) / 2));
-  background-color: rgb(223, 223, 223);
-  padding: 0.2rem 0.3rem;
+  background-color: rgb(146, 176, 240);
+  padding: 0.5rem;
+  font-size: calc(0.5rem + 1vw);
   border-radius: 1rem;
   margin-top: -2rem;
 }
@@ -64,22 +65,30 @@ body {
   height: 100%;
   .appear-first {
     margin-top: 10vh;
-    margin-bottom: 60vh;
+    margin-bottom: 40vh;
+    height: 100vh;
+    .scroll-down {
+      font-size: calc(1rem + 0.6vw);
+      position: absolute;
+      animation: up-and-down 1s ease-in-out infinite;
+      animation-direction: alternate;
+    }
     .name {
-      margin-bottom: 10vh;
+      margin-bottom: 20vh;
       display: flex;
-      font-size: calc(2rem + 2vw);
+      font-size: calc(4rem + 2vw);
       #s {
         transition: font-size 0.4s ease;
         &:hover {
           color: rgb(230, 193, 123);
           font-size: 1.5em;
+          cursor: default;
         }
       }
     }
     .sub-name,
     .sd {
-      margin-left: 15vw;
+      margin-left: 20vw;
       font-size: calc(1.25rem + 2vw);
     }
     .sd {
@@ -87,21 +96,89 @@ body {
       margin-bottom: 10vh;
       &:hover {
         color: lightblue;
+        cursor: default;
       }
     }
   }
   .appear-further-down {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     position: relative;
-    padding-bottom: 20vh;
-    left: -5vw;
-    width: 75vw;
+    padding-bottom: calc(10vh + 1rem);
+    left: -30vw;
+    width: 100vw;
+    a {
+      text-decoration: none;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.125rem;
+        bottom: 0;
+        left: 0;
+        background-color: $darker-text-color;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        &::before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+      }
+    }
+    .about-me-title {
+      font-size: calc(2rem + 1vw);
+      margin-bottom: calc(8vh + 1rem);
+      &::after {
+        content: "";
+        width: calc(50vw - 9rem);
+        height: 0.5rem;
+        background-color: rgb(146, 176, 240);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: calc(2.5rem / 2);
+        border-radius: 1rem 0 0 1rem;
+      }
+      &::before {
+        content: "";
+        border-radius: 0 1rem 1rem 0;
+        top: calc(2.5rem / 2);
+        width: calc(50vw - 9rem);
+        height: 0.5rem;
+        background-color: rgb(146, 176, 240);
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+    }
+    .about-me {
+      font-size: calc(1rem + 1vw);
+      font-weight: 200;
+      text-align: center;
+      margin-bottom: calc(8vh + 1rem);
+      b {
+        color: rgb(196, 211, 247);
+        transition: color 0.5s ease-in-out;
+        &:hover {
+          color: rgb(146, 176, 240);
+        }
+      }
+    }
     .skills {
+      margin-left: 10vw;
+      margin-right: 10vw;
       ul {
+        justify-content: center;
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         .logo {
-          margin-right: 10px;
+          margin-right: 0.625rem;
           height: calc(5rem + 5vw);
           width: calc(5rem + 5vw);
           border-radius: 50%;
@@ -122,5 +199,14 @@ body {
         }
       }
     }
+  }
+}
+
+@keyframes up-and-down {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 1vh;
   }
 }

@@ -80,10 +80,32 @@
   font-size: calc(1rem + 1vw);
   text-decoration: none;
   color: #e3e4e6;
+  position: relative;
+}
+
+.main_nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c1c1c1;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .main_nav ul li a:hover {
   color: #c1c1c1;
+}
+
+.main_nav ul li a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .circle {
@@ -119,10 +141,11 @@ button:hover {
   display: block;
   position: absolute;
   content: "html";
-  color: #292929;
+  color: white;
   margin-left: calc(((4rem + 5vw) / 2));
-  background-color: #dfdfdf;
-  padding: 0.2rem 0.3rem;
+  background-color: #92b0f0;
+  padding: 0.5rem;
+  font-size: calc(0.5rem + 1vw);
   border-radius: 1rem;
   margin-top: -2rem;
 }
@@ -131,10 +154,11 @@ button:hover {
   display: block;
   position: absolute;
   content: "css";
-  color: #292929;
+  color: white;
   margin-left: calc(((4rem + 5vw) / 2));
-  background-color: #dfdfdf;
-  padding: 0.2rem 0.3rem;
+  background-color: #92b0f0;
+  padding: 0.5rem;
+  font-size: calc(0.5rem + 1vw);
   border-radius: 1rem;
   margin-top: -2rem;
 }
@@ -143,10 +167,11 @@ button:hover {
   display: block;
   position: absolute;
   content: "js";
-  color: #292929;
+  color: white;
   margin-left: calc(((4rem + 5vw) / 2));
-  background-color: #dfdfdf;
-  padding: 0.2rem 0.3rem;
+  background-color: #92b0f0;
+  padding: 0.5rem;
+  font-size: calc(0.5rem + 1vw);
   border-radius: 1rem;
   margin-top: -2rem;
 }
@@ -155,10 +180,11 @@ button:hover {
   display: block;
   position: absolute;
   content: "scss";
-  color: #292929;
+  color: white;
   margin-left: calc(((4rem + 5vw) / 2));
-  background-color: #dfdfdf;
-  padding: 0.2rem 0.3rem;
+  background-color: #92b0f0;
+  padding: 0.5rem;
+  font-size: calc(0.5rem + 1vw);
   border-radius: 1rem;
   margin-top: -2rem;
 }
@@ -167,10 +193,11 @@ button:hover {
   display: block;
   position: absolute;
   content: "react";
-  color: #292929;
+  color: white;
   margin-left: calc(((4rem + 5vw) / 2));
-  background-color: #dfdfdf;
-  padding: 0.2rem 0.3rem;
+  background-color: #92b0f0;
+  padding: 0.5rem;
+  font-size: calc(0.5rem + 1vw);
   border-radius: 1rem;
   margin-top: -2rem;
 }
@@ -222,15 +249,25 @@ body {
 
 .content .appear-first {
   margin-top: 10vh;
-  margin-bottom: 60vh;
+  margin-bottom: 40vh;
+  height: 100vh;
+}
+
+.content .appear-first .scroll-down {
+  font-size: calc(1rem + 0.6vw);
+  position: absolute;
+  -webkit-animation: up-and-down 1s ease-in-out infinite;
+          animation: up-and-down 1s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .content .appear-first .name {
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: calc(2rem + 2vw);
+  font-size: calc(4rem + 2vw);
 }
 
 .content .appear-first .name #s {
@@ -241,11 +278,12 @@ body {
 .content .appear-first .name #s:hover {
   color: #e6c17b;
   font-size: 1.5em;
+  cursor: default;
 }
 
 .content .appear-first .sub-name,
 .content .appear-first .sd {
-  margin-left: 15vw;
+  margin-left: 20vw;
   font-size: calc(1.25rem + 2vw);
 }
 
@@ -257,16 +295,107 @@ body {
 
 .content .appear-first .sd:hover {
   color: lightblue;
+  cursor: default;
 }
 
 .content .appear-further-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
-  padding-bottom: 20vh;
-  left: -5vw;
-  width: 75vw;
+  padding-bottom: calc(10vh + 1rem);
+  left: -30vw;
+  width: 100vw;
+}
+
+.content .appear-further-down a {
+  text-decoration: none;
+  position: relative;
+}
+
+.content .appear-further-down a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  bottom: 0;
+  left: 0;
+  background-color: #c1c1c1;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.content .appear-further-down a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.content .appear-further-down .about-me-title {
+  font-size: calc(2rem + 1vw);
+  margin-bottom: calc(8vh + 1rem);
+}
+
+.content .appear-further-down .about-me-title::after {
+  content: "";
+  width: calc(50vw - 9rem);
+  height: 0.5rem;
+  background-color: #92b0f0;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: calc(2.5rem / 2);
+  border-radius: 1rem 0 0 1rem;
+}
+
+.content .appear-further-down .about-me-title::before {
+  content: "";
+  border-radius: 0 1rem 1rem 0;
+  top: calc(2.5rem / 2);
+  width: calc(50vw - 9rem);
+  height: 0.5rem;
+  background-color: #92b0f0;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+.content .appear-further-down .about-me {
+  font-size: calc(1rem + 1vw);
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: calc(8vh + 1rem);
+}
+
+.content .appear-further-down .about-me b {
+  color: #c4d3f7;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+.content .appear-further-down .about-me b:hover {
+  color: #92b0f0;
+}
+
+.content .appear-further-down .skills {
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .content .appear-further-down .skills ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,7 +405,7 @@ body {
 }
 
 .content .appear-further-down .skills ul .logo {
-  margin-right: 10px;
+  margin-right: 0.625rem;
   height: calc(5rem + 5vw);
   width: calc(5rem + 5vw);
   border-radius: 50%;
@@ -302,5 +431,23 @@ body {
 
 .content .appear-further-down .skills ul .react_logo {
   padding: 9px;
+}
+
+@-webkit-keyframes up-and-down {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 1vh;
+  }
+}
+
+@keyframes up-and-down {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 1vh;
+  }
 }
 /*# sourceMappingURL=index.css.map */

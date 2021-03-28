@@ -80,10 +80,32 @@
   font-size: calc(1rem + 1vw);
   text-decoration: none;
   color: #e3e4e6;
+  position: relative;
+}
+
+.main_nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c1c1c1;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .main_nav ul li a:hover {
   color: #c1c1c1;
+}
+
+.main_nav ul li a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 button {
@@ -118,6 +140,9 @@ button:hover {
 }
 
 body {
+  background-image: url(../svgs/contact-background.svg);
+  background-repeat: repeat-y;
+  background-size: 125%;
   background-color: #66ab77;
   font-size: 62.5%;
 }
