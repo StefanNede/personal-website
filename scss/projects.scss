@@ -1,15 +1,38 @@
 @import "./variables";
 @import "./nav";
 @import "./button";
+@import "./customCursor";
 
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: $project-bg-color;
   font-size: 62.5%;
+  background-image: url(../svgs/projects-background.svg);
+  background-repeat: repeat-y;
+  background-size: 125%;
+}
+
+.restofpage {
+  position: absolute;
+  margin-left: 20vw;
+  margin-top: 10vh;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .announcements {
+    font-size: 2rem;
+  }
+}
+
+footer {
+  margin-bottom: 2vh;
+  margin-top: 5vh;
 }

@@ -1,5 +1,5 @@
 const hamburger:HTMLElement = document.querySelector(".hamburger");
-const hamburger_lines:Array = document.querySelectorAll(".hl");
+const hamburger_lines:Array<HTMLElement> = document.querySelectorAll(".hl");
 const nav:HTMLNavbar = document.querySelector(".main_nav");
 const customCursor:HTMLSpanElement|null = document.querySelector(".circle");
 nav.style.backgroundColor = "#81b58e";

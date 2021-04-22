@@ -118,6 +118,7 @@
           box-shadow: 0 0 0 2px #bababa;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
+  z-index: -1;
 }
 
 .back-to-top {
@@ -130,6 +131,7 @@ button {
   border-radius: 2rem;
   border: none;
   padding: 0.5rem 1rem;
+  background-color: #efefef;
 }
 
 button:hover {

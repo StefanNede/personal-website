@@ -112,11 +112,25 @@ button {
   border-radius: 2rem;
   border: none;
   padding: 0.5rem 1rem;
+  background-color: #efefef;
 }
 
 button:hover {
   -webkit-box-shadow: 0 0 1rem 0 #c1c1c1;
           box-shadow: 0 0 1rem 0 #c1c1c1;
+}
+
+.circle {
+  position: absolute;
+  height: calc(2rem + 5vw);
+  width: calc(2rem + 5vw);
+  border-radius: 50%;
+  background: transparent;
+  -webkit-box-shadow: 0 0 0 2px #bababa;
+          box-shadow: 0 0 0 2px #bababa;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  z-index: -1;
 }
 
 * {
@@ -125,10 +139,40 @@ button:hover {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #ba7b7b;
   font-size: 62.5%;
+  background-image: url(../svgs/projects-background.svg);
+  background-repeat: repeat-y;
+  background-size: 125%;
+}
+
+.restofpage {
+  position: absolute;
+  margin-left: 20vw;
+  margin-top: 10vh;
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.restofpage .announcements {
+  font-size: 2rem;
+}
+
+footer {
+  margin-bottom: 2vh;
+  margin-top: 5vh;
 }
 /*# sourceMappingURL=projects.css.map */

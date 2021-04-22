@@ -1,0 +1,15 @@
+.imageChanger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.imageChanger .previous,
+.imageChanger .next {
+  position: absolute;
+}
+
+.imageChanger .images {
+  position: absolute;
+}
+/*# sourceMappingURL=imageSlider.css.map */
